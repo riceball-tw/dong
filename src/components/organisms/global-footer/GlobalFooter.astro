@@ -1,7 +1,7 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import Logo from "@/components/atoms/logo/Logo.astro";
-import Logomark from "@/components/atoms/logomark/Logomark.astro";
+import Logo from "@/assets/images/brand/logo.svg";
+import Logomark from "@/assets/images/brand/logomark.svg";
 import { getLocale, useTranslations } from "@/i18n/i18n";
 import { currentLocaleWebsiteConfig } from "@/utils/getWebsiteConfig.ts";
 import { defaultLocale } from "@/utils/i18n.ts";
@@ -40,8 +40,8 @@ const footerSections = [
         href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, '')}
         class="inline-flex items-center gap-1"
         >
-          <Logo />
-          <Logomark />
+          <Logo width={64} height={64} />
+          <Logomark width={120} height={40} />
         </a>
         <p class="tracking-wider text-xs">{ websiteSlogan }</p>
       </div>

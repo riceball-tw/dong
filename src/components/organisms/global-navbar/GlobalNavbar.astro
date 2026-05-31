@@ -3,8 +3,8 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import { Icon } from "astro-icon/components";
 import Container from "@/components/atoms/container/Container.astro";
 import LanguagePicker from "@/components/atoms/language-picker/LanguagePicker.astro";
-import Logo from "@/components/atoms/logo/Logo.astro";
-import Logomark from "@/components/atoms/logomark/Logomark.astro";
+import Logo from "@/assets/images/brand/logo.svg";
+import Logomark from "@/assets/images/brand/logomark.svg";
 import ThemeToggleButton from "@/components/atoms/theme-toggle-button/ThemeToggleButton.astro";
 import GlobalSearch from "@/components/organisms/global-search/GlobalSearch.astro";
 import { getLocale, useTranslations } from "@/i18n/i18n";
@@ -33,8 +33,8 @@ const currentPath = pathname.slice(1);
         href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, '')}
         class="hidden md:inline-flex items-center gap-1 whitespace-nowrap px-4 text-lg font-bold tracking-widest"
         >
-          <Logo class="hidden md:block" />
-          <Logomark />
+          <Logo class="hidden md:block" width={64} height={64} />
+          <Logomark width={120} height={40} />
         </a>
         <ul style="height: var(--mainNav-height);" class="font-medium items-center rounded-full flex gap-2 sm:gap-4 justify-center bg-navbar text-navbar-foreground px-4 shadow-lg md:bg-transparent md:border-none md:shadow-none w-auto md:w-full overflow-x-auto overflow-y-hidden">
             {
