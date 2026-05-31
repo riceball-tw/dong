@@ -2,7 +2,9 @@
 import { Skeleton } from "@/components/atoms/skeleton/index.ts";
 import { currentLocaleWebsiteConfig } from "@/utils/getWebsiteConfig.ts";
 
-const { setting: { githubCommentRepo } } = (await currentLocaleWebsiteConfig(Astro.currentLocale)).data;
+const {
+	setting: { githubCommentRepo },
+} = (await currentLocaleWebsiteConfig(Astro.currentLocale)).data;
 ---
 
 <div data-cy="post-comment" data-pagefind-ignore="all" class="comment py-8" style="min-height: 367px">
