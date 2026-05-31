@@ -65,13 +65,13 @@ function replaceLocaleInPath(pathname: string, targetLocale: string): string {
           // @ts-ignore
           // Link 'sizes' property is DOMTokenList type not string
           // https://github.com/jonasmerlin/astro-seo/issues/87
-          { rel: 'icon', href: '/images/brand/favicon/favicon.ico', sizes: '32x32' },
-          { rel: 'icon', href: '/images/brand/favicon/logo.svg', type: 'image/svg+xml' },
-          { rel: 'apple-touch-icon', href: '/images/brand/favicon/apple-touch-icon.png' },
-          { rel: 'manifest', href: '/manifest.webmanifest' },
+          { rel: 'icon', href: `${base}images/brand/favicon/favicon.ico`, sizes: '32x32' },
+          { rel: 'icon', href: `${base}images/brand/favicon/logo.svg`, type: 'image/svg+xml' },
+          { rel: 'apple-touch-icon', href: `${base}images/brand/favicon/apple-touch-icon.png` },
+          { rel: 'manifest', href: `${base}manifest.webmanifest` },
           {
             rel: 'sitemap',
-            href: '/sitemap-index.xml',
+            href: `${base}sitemap-index.xml`,
             type: 'application/xml',
           },
           // Default Language Alternates
@@ -116,7 +116,7 @@ function replaceLocaleInPath(pathname: string, targetLocale: string): string {
             rel:"alternate",
             type:"application/rss+xml",
             title:`${seoTitle}`,
-            href:"/rss.xml"
+            href:`${base}rss.xml`
           }
         ],
         meta: [

@@ -47,8 +47,8 @@ export function getStaticPaths() {
 ---
 <BlogBase>
   <slot name="head">
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-    <script is:inline src="/pagefind/pagefind-ui.js"></script>
+    <link href={`${import.meta.env.BASE_URL}pagefind/pagefind-ui.css`} rel="stylesheet">
+    <script is:inline src={`${import.meta.env.BASE_URL}pagefind/pagefind-ui.js`}></script>
   </slot>
   <Hero>
     <a data-cy="last-update-link" slot="beforeHeadline" class="mx-auto inline-block" href={projectUpdateBadgeUrl}>

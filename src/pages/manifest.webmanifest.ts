@@ -13,23 +13,23 @@ export const GET: APIRoute = () =>
 			name,
 			icons: [
 				{
-					src: "images/brand/favicon/icon-192.png",
+					src: `${import.meta.env.BASE_URL}images/brand/favicon/icon-192.png`,
 					type: "image/png",
 					sizes: "192x192",
 				},
 				{
-					src: "images/brand/favicon/icon-512.png",
+					src: `${import.meta.env.BASE_URL}images/brand/favicon/icon-512.png`,
 					type: "image/png",
 					sizes: "512x512",
 				},
 				{
-					src: "images/brand/favicon/maskable-icon-512.png",
+					src: `${import.meta.env.BASE_URL}images/brand/favicon/maskable-icon-512.png`,
 					type: "image/png",
 					sizes: "512x512",
 					purpose: "maskable",
 				},
 			],
-			start_url: "/",
+			start_url: import.meta.env.BASE_URL,
 			display: "fullscreen",
 			theme_color: themeColor,
 			background_color: themeColor,
