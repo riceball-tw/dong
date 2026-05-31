@@ -1,6 +1,7 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/astro-blog/commits/main"
+		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/astro-blog/commits/main",
+		"githubCommentRepo": "riceball-tw/Blog-comment"
 	},
 	"brand": {
 		"name": "网页东东",

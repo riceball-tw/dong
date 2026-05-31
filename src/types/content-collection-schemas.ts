@@ -44,6 +44,7 @@ export const shortpostSchema = z.object({
 export const websiteSchema = z.object({
 	setting: z.object({
 		projectUpdateBadgeUrl: z.string(),
+		githubCommentRepo: z.string(),
 	}),
 	brand: z.object({
 		name: z.string(),
