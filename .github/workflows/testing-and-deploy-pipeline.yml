@@ -74,7 +74,6 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:v1.60.0-jammy
     env:
-      YOUTUBEAPIKEY: ${{ secrets.YOUTUBEAPIKEY }}
       PUBLIC_GOOGLEANALYTIC_ID: ${{ vars.PUBLIC_GOOGLEANALYTIC_ID }}
       PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
     steps:
