@@ -2,7 +2,7 @@ describe("Category page is effective", () => {
 	const defaultLocale = Cypress.env("defaultLocale");
 
 	beforeEach(() => {
-		const categorySlug = "CategoryOne";
+		const categorySlug = "Example";
 		cy.visit(`${defaultLocale}/post/categories/${categorySlug}`);
 	});
 
