@@ -15,7 +15,9 @@ const t = useTranslations(getLocale(Astro.currentLocale));
 const { navigation } = (await currentLocaleWebsiteConfig(Astro.currentLocale))
 	.data;
 const { pathname } = new URL(Astro.request.url);
-const currentPath = pathname.slice(1);
+const base = import.meta.env.BASE_URL;
+const pathWithoutBase = pathname.replace(base, '');
+const currentPath = pathWithoutBase.replace(/^\/+/, '');
 ---
 
 <nav
