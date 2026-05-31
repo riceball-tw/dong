@@ -1,0 +1,61 @@
+---
+isDraft: false
+icon:
+  name: material-symbols:edit-note-outline-rounded
+  title: Edit icon representing content creation
+subHeadline: Write better with MDX
+headline: Content Creation with MDX
+excerpt: Discover how to write engaging blog posts using MDX. This guide covers standard Markdown syntax and the specialized components included with the theme.
+series: Getting Started
+category: Tutorial
+tags:
+  - MDX
+  - Markdown
+  - Writing
+publishDate: 2024-05-31
+---
+
+import Sidenote from "@/components/atoms/sidenote/Sidenote.astro";
+
+Writing content in Dong Blog is a breeze thanks to **MDX**. It combines the simplicity of Markdown with the power of React components.
+
+## Markdown Basics
+
+Standard Markdown syntax is fully supported:
+
+- **Bold text** and *Italic text*
+- [Links](https://astro.build)
+- Code blocks with syntax highlighting
+- Ordered and unordered lists
+
+## Custom Components
+
+We've included several components to enhance your posts.
+
+### Sidenotes
+
+Use sidenotes to provide extra context without breaking the flow of your writing.
+
+<Sidenote type="info">
+  You can use MDX components anywhere in your file! This is a custom Sidenote component.
+</Sidenote>
+
+### Images
+
+The theme automatically optimizes images using `astro:assets`. You can use the standard Markdown syntax or our `PostImage` component for more control.
+
+```md
+![Alt text](../../assets/my-image.png)
+```
+
+### Expressive Code
+
+We use `astro-expressive-code` for beautiful, functional code blocks. It supports titles, line highlighting, and more.
+
+```js title="example.js" {1}
+console.log("This line is highlighted");
+```
+
+## Creating a New Post
+
+To create a new post, simply add a new `.mdx` file to `src/content/post/[language]/`. Make sure to include the required frontmatter fields.

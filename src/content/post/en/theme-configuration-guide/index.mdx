@@ -1,0 +1,65 @@
+---
+isDraft: false
+icon:
+  name: material-symbols:settings-outline-rounded
+  title: Settings icon representing configuration
+subHeadline: Tailor your blog to your needs
+headline: Theme Configuration Guide
+excerpt: Learn how to customize the Dong Blog theme, from brand assets and navigation to global settings, ensuring your website truly reflects your unique style.
+series: Getting Started
+category: Configuration
+tags:
+  - Configuration
+  - Customization
+  - Setup
+publishDate: 2024-05-31
+---
+
+import PostImage from "@/components/atoms/post-image/PostImage.astro";
+import LogoMark from "@/assets/images/brand/logomark.svg";
+
+Configuring your blog is the first step toward making it your own. Dong Blog uses a combination of configuration files and Astro's built-in features to give you full control.
+
+## Global Configuration
+
+Most of your blog's settings are located in `src/content/website/`. You'll find separate JSON files for each language (e.g., `en/config.json`).
+
+### Brand Identity
+
+You can update your brand details in the `brand` section:
+
+```json
+"brand": {
+  "name": "Dong Blog",
+  "slogan": "A modern blog theme for Astro",
+  "description": "...",
+  "themeColor": "#3b82f6",
+  "email": "hello@example.com"
+}
+```
+
+<PostImage src={LogoMark} alt="Dong Blog Logomark" title="Customize your brand assets" />
+
+## Navigation
+
+Navigation links can be configured in the same config file under the `navigation` array. Each item supports an icon name from [Iconify](https://iconify.design/).
+
+## Styling with Tailwind
+
+The entire theme is styled with **Tailwind CSS**. You can modify `tailwind.config.ts` to change the color palette, typography, and other design tokens.
+
+```ts title="tailwind.config.ts"
+export default {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#3b82f6',
+      },
+    },
+  },
+}
+```
+
+## i18n Configuration
+
+We use a custom i18n solution. Check `src/i18n/i18n.ts` and `src/utils/i18n.ts` to manage your supported languages and routing preferences.
