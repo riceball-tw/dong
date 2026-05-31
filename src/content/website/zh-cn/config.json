@@ -1,19 +1,19 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/astro-blog/commits/main",
-		"githubCommentRepo": "riceball-tw/Blog-comment"
+		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/dong",
+		"githubCommentRepo": "riceball-tw/dong-comment"
 	},
 	"brand": {
-		"name": "网页东东",
-		"slogan": "亲切简单描述如何建构网页",
-		"description": "是什么原因导致网页建构上遭遇瓶颈？以及如何突破？网页东东用最亲切简单的方式描述如何设计与架构网页，着重于图像化以及实例操作，累积教学上的经验降低每次学习新事物的成本",
+		"name": "东东",
+		"slogan": "功能丰富、久经考验且易于使用的博客主题",
+		"description": "东东是一款功能丰富、久经考验且易于使用的博客主题，经过数年的开发与改进，我决定将博客转换为通用主题并开源。",
 		"themeColor": "#0d0a28",
-		"email": "webdongdev@gmail.com",
+		"email": "example@example.com",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,
 			"src": "/images/brand/default-og.jpg",
-			"alt": "网页东东横幅"
+			"alt": "默认 OG 图片"
 		},
 		"copyright": {
 			"title": "CC BY-NC 4.0",
@@ -21,31 +21,31 @@
 		},
 		"author": {
 			"name": "网页东东",
-			"url": "https://www.webdong.dev/"
+			"url": "https://www.example.com/"
 		},
 		"publisher": {
 			"name": "网页东东",
-			"url": "https://www.webdong.dev/"
+			"url": "https://www.example.com/"
 		},
 		"supportMe": {
-			"githubUrl": "https://github.com/riceball-tw/web-dong-blog"
+			"githubUrl": "https://github.com/riceball-tw/dong"
 		},
 		"socials": [
 			{
 				"name": "Threads",
 				"iconName": "simple-icons:threads",
-				"url": "https://www.threads.net/@webdong.dev"
+				"url": "https://www.example.com/"
 			},
 			{
 				"name": "GitHub",
 				"iconName": "simple-icons:github",
-				"url": "https://github.com/riceball-tw/web-dong-blog"
+				"url": "https://github.com/riceball-tw/dong"
 			},
 			{
 				"name": "RSS",
 				"iconName": "simple-icons:rss",
 				"imgUrl": "/images/global/social/rss.svg",
-				"url": "https://www.webdong.dev/rss.xml"
+				"url": "https://www.example.com/rss.xml"
 			}
 		]
 	},

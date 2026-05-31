@@ -1,51 +1,51 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/astro-blog/commits/main",
-		"githubCommentRepo": "riceball-tw/Blog-comment"
+		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/dong",
+		"githubCommentRepo": "riceball-tw/dong-comment"
 	},
 	"brand": {
-		"name": "WebDong",
-		"slogan": "Practically explains How to design and develop websites",
-		"description": "What causes bottlenecks in web page construction? And how to break through? Webpage Dongdong describes how to design and structure webpages in the most friendly and simple way, focusing on images and practical operations, accumulating teaching experience and reducing the cost of learning new things each time.",
+		"name": "Dong",
+		"slogan": " Feature-rich blog theme that's battle tested and easy to use, Powered by astro.js v6 ",
+		"description": "Dong is a feature-rich, battle-tested, and easy-to-use blog theme. After years of development and improvement, I decided to convert the blog into a universal theme and open source it.",
 		"themeColor": "#0d0a28",
-		"email": "webdongdev@gmail.com",
+		"email": "example@example.com",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,
 			"src": "/images/brand/default-og.jpg",
-			"alt": "WebdDong Website Banner"
+			"alt": "Default OG Image"
 		},
 		"copyright": {
 			"title": "CC BY-NC 4.0",
 			"url": "https://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW"
 		},
 		"author": {
-			"name": "WebDong",
-			"url": "https://weweweb.pages.dev/"
+			"name": "Dong",
+			"url": "https://www.example.com/"
 		},
 		"publisher": {
-			"name": "WebDong",
-			"url": "https://www.webdong.dev/"
+			"name": "Dong",
+			"url": "https://www.example.com/"
 		},
 		"supportMe": {
-			"githubUrl": "https://github.com/riceball-tw/web-dong-blog"
+			"githubUrl": "https://github.com/riceball-tw/dong"
 		},
 		"socials": [
 			{
 				"name": "Threads",
 				"iconName": "simple-icons:threads",
-				"url": "https://www.threads.net/@webdong.dev"
+				"url": "https://www.example.com/"
 			},
 			{
 				"name": "GitHub",
 				"iconName": "simple-icons:github",
-				"url": "https://github.com/riceball-tw/web-dong-blog"
+				"url": "https://github.com/riceball-tw/dong"
 			},
 			{
 				"name": "RSS",
 				"iconName": "simple-icons:rss",
 				"imgUrl": "/images/global/social/rss.svg",
-				"url": "https://www.webdong.dev/rss.xml"
+				"url": "https://www.example.com/rss.xml"
 			}
 		]
 	},

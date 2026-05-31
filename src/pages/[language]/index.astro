@@ -19,9 +19,10 @@ import { defaultLocale, languages, stripLanguageCode } from "@/utils/i18n.ts";
 import toSnakeCase from "@/utils/toSnakeCase.ts";
 
 const t = useTranslations(getLocale(Astro.currentLocale));
-const { projectUpdateBadgeUrl } = (
-	await currentLocaleWebsiteConfig(Astro.currentLocale)
-).data.setting;
+const websiteConfig = (await currentLocaleWebsiteConfig(Astro.currentLocale))
+	.data;
+const { projectUpdateBadgeUrl } = websiteConfig.setting;
+const brandName = websiteConfig.brand.name;
 const categoriesLists = sortedPostCategoryies.map((category) => ({
 	type: category,
 	posts: dateSortedLocaleRelatedPosts(getLocale(Astro.currentLocale))
@@ -56,7 +57,7 @@ export function getStaticPaths() {
     </a>
     <div class="container mx-auto tracking-tight leading-tight text-center" slot="headline" >
         <!-- Line-1 -->
-        <div><span>Webdong.dev</span> <span class="whitespace-nowrap">{t("away_trite_antelope_drip")}</span></div>
+        <div><span>{brandName}</span> <span class="whitespace-nowrap">{t("away_trite_antelope_drip")}</span></div>
         <!-- Line-2 -->
         <div class="inline-flex justify-center items-baseline-last gap-2 flex-wrap">
           <!-- Design -->
