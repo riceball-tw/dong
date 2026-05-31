@@ -7,7 +7,7 @@ const PUBLIC_BASE_URL = "/dong/";
 
 export default defineConfig({
 	env: {
-		defaultLocale: "zh-tw",
+		defaultLocale: "en",
 	},
 	e2e: {
 		baseUrl: `http://localhost:4321${PUBLIC_BASE_URL}`,

@@ -8,7 +8,7 @@ export const languages = {
 	"zh-tw": "繁體中文",
 } as const;
 
-export const defaultLocale = "zh-tw";
+export const defaultLocale = "en";
 export const prefixDefaultLocale = true;
 
 export type LanguageKey = keyof typeof languages;
