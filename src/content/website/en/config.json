@@ -8,7 +8,6 @@
 		"slogan": " Feature-rich blog theme that's battle tested and easy to use, Powered by astro.js v6 ",
 		"description": "Dong is a feature-rich, battle-tested, and easy-to-use blog theme. After years of development and improvement, I decided to convert the blog into a universal theme and open source it.",
 		"themeColor": "#0d0a28",
-		"email": "example@example.com",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,

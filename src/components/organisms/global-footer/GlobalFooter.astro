@@ -15,7 +15,6 @@ const {
 	name: websiteName,
 	copyright: websiteCopyright,
 	slogan: websiteSlogan,
-	email: websiteEmail,
 } = globalWebsiteConfig.brand;
 const { navigation: globalWebsiteNavigation } = globalWebsiteConfig;
 
@@ -45,7 +44,7 @@ const footerSections = [
         </a>
         <p class="tracking-wider text-xs">{ websiteSlogan }</p>
       </div>
-      <small class="max-w-prose text-muted-foreground tracking-widest">{t("weak_kind_cowfish_hint", {websiteName})} <a class="underline" href={websiteCopyright.url}>{ websiteCopyright.title }</a> {t("north_that_shrimp_fold")} <a class="underline" href={`mailto:${websiteEmail}`}>email</a></small>
+      <small class="max-w-prose text-muted-foreground tracking-widest">{t("weak_kind_cowfish_hint", {websiteName})} <a class="underline" href={websiteCopyright.url}>{ websiteCopyright.title }</a> {t("north_that_shrimp_fold")}</small>
     </div>
 
     <!-- Footer Sections -->
