@@ -12,9 +12,8 @@ const globalWebsiteConfig = (
 ).data;
 const {
 	socials: globalWebsiteSocial,
-	name: websiteName,
-	copyright: websiteCopyright,
 	slogan: websiteSlogan,
+	copyright: websiteCopyright,
 } = globalWebsiteConfig.brand;
 const { navigation: globalWebsiteNavigation } = globalWebsiteConfig;
 
@@ -44,7 +43,7 @@ const footerSections = [
         </a>
         <p class="tracking-wider text-xs">{ websiteSlogan }</p>
       </div>
-      <small class="max-w-prose text-muted-foreground tracking-widest">{t("weak_kind_cowfish_hint", {websiteName})} <a class="underline" href={websiteCopyright.url}>{ websiteCopyright.title }</a> {t("north_that_shrimp_fold")}</small>
+      <small class="max-w-prose text-muted-foreground tracking-widest" set:html={websiteCopyright}></small>
     </div>
 
     <!-- Footer Sections -->

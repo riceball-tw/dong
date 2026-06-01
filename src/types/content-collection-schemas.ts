@@ -57,10 +57,7 @@ export const websiteSchema = z.object({
 			src: z.string(),
 			alt: z.string(),
 		}),
-		copyright: z.object({
-			title: z.string(),
-			url: z.url(),
-		}),
+		copyright: z.string(),
 		socials: z.array(
 			z.object({
 				name: z.string(),
@@ -88,7 +85,7 @@ export const websiteSchema = z.object({
 		z.object({
 			iconName: z.string(),
 			name: z.string(),
-			url: z.url()
+			url: z.string(),
 		}),
 	),
 });

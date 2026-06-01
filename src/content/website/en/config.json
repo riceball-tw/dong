@@ -14,10 +14,7 @@
 			"src": "/images/brand/default-og.jpg",
 			"alt": "Default OG Image"
 		},
-		"copyright": {
-			"title": "CC BY-NC 4.0",
-			"url": "https://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW"
-		},
+		"copyright": "Welcome to share, please follow the <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a> license<br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> theme is MIT-licensed",
 		"author": {
 			"name": "Dong",
 			"url": "https://www.example.com/"

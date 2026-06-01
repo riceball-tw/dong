@@ -14,10 +14,7 @@
 			"src": "/images/brand/default-og.jpg",
 			"alt": "默认 OG 图片"
 		},
-		"copyright": {
-			"title": "CC BY-NC 4.0",
-			"url": "https://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW"
-		},
+		"copyright": "欢迎分享 Dong，内容引用请遵循 <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a><br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> 布景基于 MIT 授权",
 		"author": {
 			"name": "网页东东",
 			"url": "https://www.example.com/"
