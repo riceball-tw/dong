@@ -10,7 +10,7 @@ export { defaultLocale, languages, prefixDefaultLocale };
 export type { LanguageKey, LanguageValue };
 
 // !IMPORTANT: Set site url property with your own domain
-export const baseUrl = "https://riceball-tw.github.io";
+export const baseUrl = "https://www.webdong.dev/";
 
 export const languageFallback = {
 	"zh-cn": "zh-tw",
