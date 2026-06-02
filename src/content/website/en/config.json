@@ -1,27 +1,27 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/dong",
-		"githubCommentRepo": "riceball-tw/dong-comment"
+		"projectUpdateBadgeUrl": "https://github.com/fork-riceball/dong-webdong",
+		"githubCommentRepo": "riceball-tw/Blog-comment"
 	},
 	"brand": {
-		"name": "Dong",
-		"slogan": " Feature-rich blog theme that's battle tested and easy to use, Powered by astro.js v6 ",
-		"description": "Dong is a feature-rich, battle-tested, and easy-to-use blog theme. After years of development and improvement, I decided to convert the blog into a universal theme and open source it.",
+		"name": "Webdong",
+		"slogan": "Practically explains How to design and develop websites",
+		"description": "What causes bottlenecks in web page construction? And how to break through? Webpage Dongdong describes how to design and structure webpages in the most friendly and simple way, focusing on images and practical operations, accumulating teaching experience and reducing the cost of learning new things each time.",
 		"themeColor": "#0d0a28",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,
 			"src": "/images/brand/default-og.jpg",
-			"alt": "Default OG Image"
+			"alt": "Webdong Banner"
 		},
-		"copyright": "Welcome to share, please follow the <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a> license<br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> theme is MIT-licensed",
+		"copyright": "Welcome to share WebDong, please follow the <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a> license<br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> theme is MIT-licensed",
 		"author": {
-			"name": "Dong",
-			"url": "https://www.example.com/"
+			"name": "Webdong",
+			"url": "https://www.webdong.dev/"
 		},
 		"publisher": {
-			"name": "Dong",
-			"url": "https://www.example.com/"
+			"name": "Webdong",
+			"url": "https://www.webdong.dev/"
 		},
 		"supportMe": {
 			"githubUrl": "https://github.com/riceball-tw/dong"
@@ -30,7 +30,7 @@
 			{
 				"name": "Threads",
 				"iconName": "simple-icons:threads",
-				"url": "https://www.example.com/"
+				"url": "https://www.threads.net/@webdong.dev"
 			},
 			{
 				"name": "GitHub",
@@ -41,7 +41,7 @@
 				"name": "RSS",
 				"iconName": "simple-icons:rss",
 				"imgUrl": "/images/global/social/rss.svg",
-				"url": "https://www.example.com/rss.xml"
+				"url": "https://www.webdong.dev/rss.xml"
 			}
 		]
 	},

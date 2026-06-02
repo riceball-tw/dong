@@ -1,27 +1,27 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/dong",
-		"githubCommentRepo": "riceball-tw/dong-comment"
+		"projectUpdateBadgeUrl": "https://github.com/fork-riceball/dong-webdong",
+		"githubCommentRepo": "riceball-tw/Blog-comment"
 	},
 	"brand": {
-		"name": "東東",
-		"slogan": "功能豐富、久經考驗且易於使用的部落格主題",
-		"description": "東東是一款功能豐富、久經考驗且易於使用的部落格主題，經過數年的開發與改進，我決定將部落格轉換為通用佈景並開源。",
+		"name": "網頁東東",
+		"slogan": "親切簡單描述如何建構網頁",
+		"description": "是什麼原因導致網頁建構上遭遇瓶頸？以及如何突破？網頁東東用最親切簡單的方式描述如何設計與架構網頁，著重於圖像化以及實例操作，累積教學上的經驗降低每次學習新事物的成本",
 		"themeColor": "#0d0a28",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,
 			"src": "/images/brand/default-og.jpg",
-			"alt": "預設 OG 圖片"
+			"alt": "網頁東東橫幅"
 		},
-		"copyright": "歡迎分享 Dong，內容引用請遵循 <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hant\">CC BY-NC 4.0</a><br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> 佈景基於 MIT 授權",
+		"copyright": "歡迎分享網頁東東，內容引用請遵循 <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hant\">CC BY-NC 4.0</a><br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> 佈景基於 MIT 授權",
 		"author": {
 			"name": "網頁東東",
-			"url": "https://www.example.com/"
+			"url": "https://www.webdong.dev/"
 		},
 		"publisher": {
 			"name": "網頁東東",
-			"url": "https://www.example.com/"
+			"url": "https://www.webdong.dev/"
 		},
 		"supportMe": {
 			"githubUrl": "https://github.com/riceball-tw/dong"
@@ -30,18 +30,18 @@
 			{
 				"name": "Threads",
 				"iconName": "simple-icons:threads",
-				"url": "https://www.example.com/"
+				"url": "https://www.threads.net/@webdong.dev"
 			},
 			{
 				"name": "GitHub",
 				"iconName": "simple-icons:github",
-				"url": "https://github.com/riceball-tw/dong"
+				"url": "http://github.com/riceball-tw/dong"
 			},
 			{
 				"name": "RSS",
 				"iconName": "simple-icons:rss",
 				"imgUrl": "/images/global/social/rss.svg",
-				"url": "https://www.example.com/rss.xml"
+				"url": "https://www.webdong.dev/rss.xml"
 			}
 		]
 	},

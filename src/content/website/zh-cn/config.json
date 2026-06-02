@@ -1,27 +1,27 @@
 {
 	"setting": {
-		"projectUpdateBadgeUrl": "https://github.com/riceball-tw/dong",
-		"githubCommentRepo": "riceball-tw/dong-comment"
+		"projectUpdateBadgeUrl": "https://github.com/fork-riceball/dong-webdong",
+		"githubCommentRepo": "riceball-tw/Blog-comment"
 	},
 	"brand": {
-		"name": "东东",
-		"slogan": "功能丰富、久经考验且易于使用的博客主题",
-		"description": "东东是一款功能丰富、久经考验且易于使用的博客主题，经过数年的开发与改进，我决定将博客转换为通用主题并开源。",
+		"name": "网页东东",
+		"slogan": "亲切简单地描述如何构建网页",
+		"description": "是什么原因导致网页构建上遭遇瓶颈？以及如何突破？网页东东用最亲切简单的方式描述如何设计与架构网页，着重于图像化以及实例操作，累积教学上的经验降低每次学习新事物的成本",
 		"themeColor": "#0d0a28",
 		"thumbnail": {
 			"width": 1200,
 			"height": 630,
 			"src": "/images/brand/default-og.jpg",
-			"alt": "默认 OG 图片"
+			"alt": "网页东东横幅"
 		},
-		"copyright": "欢迎分享 Dong，内容引用请遵循 <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a><br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> 布景基于 MIT 授权",
+		"copyright": "欢迎分享网页东东，内容引用请遵循 <a class=\"underline\" href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a><br/><a class=\"underline\" href=\"https://github.com/riceball-tw/dong\">Dong</a> 布景基于 MIT 授权",
 		"author": {
 			"name": "网页东东",
-			"url": "https://www.example.com/"
+			"url": "https://www.webdong.dev/"
 		},
 		"publisher": {
 			"name": "网页东东",
-			"url": "https://www.example.com/"
+			"url": "https://www.webdong.dev/"
 		},
 		"supportMe": {
 			"githubUrl": "https://github.com/riceball-tw/dong"
@@ -30,7 +30,7 @@
 			{
 				"name": "Threads",
 				"iconName": "simple-icons:threads",
-				"url": "https://www.example.com/"
+				"url": "https://www.threads.net/@webdong.dev"
 			},
 			{
 				"name": "GitHub",
@@ -41,7 +41,7 @@
 				"name": "RSS",
 				"iconName": "simple-icons:rss",
 				"imgUrl": "/images/global/social/rss.svg",
-				"url": "https://www.example.com/rss.xml"
+				"url": "https://www.webdong.dev/rss.xml"
 			}
 		]
 	},
