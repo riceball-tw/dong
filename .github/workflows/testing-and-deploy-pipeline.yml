@@ -45,7 +45,7 @@ jobs:
       - name: Checkout external content
         uses: actions/checkout@v4
         with:
-          repository: organization/repo
+          repository: riceball-tw/obsidian-sync
           ref: main
           path: src/content-temp/
           token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
