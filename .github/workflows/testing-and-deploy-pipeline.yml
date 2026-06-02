@@ -42,17 +42,17 @@ jobs:
       # ! To seperate code & content, you can overwrite local content from below
       # ! Add GitHub secrets named: CHECKOUT_GITHUB_CONTENT_PAT
       # ! - Permission: Target content repo's Content READ and Write
-      # - name: Checkout external content
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: organization/repo
-      #     ref: main
-      #     path: src/content-temp/
-      #     token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
-      #     lfs: true
+      - name: Checkout external content
+        uses: actions/checkout@v4
+        with:
+          repository: organization/repo
+          ref: main
+          path: src/content-temp/
+          token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
+          lfs: true
 
-      # - name: Merge local and external content folder
-      #   run: rsync -av --ignore-existing src/content-temp/ src/content/
+      - name: Merge local and external content folder
+        run: rsync -av --ignore-existing src/content-temp/ src/content/
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
@@ -80,26 +80,26 @@ jobs:
       PUBLIC_GOOGLEANALYTIC_ID: ${{ vars.PUBLIC_GOOGLEANALYTIC_ID }}
       PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
     steps:
-      # - name: Install Git LFS and rsync
-      #   run: |
-      #     apt-get update -qq
-      #     apt-get install -y -qq git-lfs rsync
-      #     git lfs install
+      - name: Install Git LFS and rsync
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq git-lfs rsync
+          git lfs install
 
       - name: Checkout
         uses: actions/checkout@v4
 
-      # - name: Checkout external content
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: organization/repo
-      #     ref: main
-      #     path: src/content-temp/
-      #     token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
-      #     lfs: true
+      - name: Checkout external content
+        uses: actions/checkout@v4
+        with:
+          repository: riceball-tw/obsidian-sync
+          ref: main
+          path: src/content-temp/
+          token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
+          lfs: true
 
-      # - name: Merge local and external content folder
-      #   run: rsync -av --ignore-existing src/content-temp/ src/content/
+      - name: Merge local and external content folder
+        run: rsync -av --ignore-existing src/content-temp/ src/content/
 
       - name: Configure git safe directory
         run: git config --global --add safe.directory '*'
@@ -107,22 +107,22 @@ jobs:
       - name: Environment Setup
         uses: ./.github/actions/setup
 
-      # # 1. List all LFS files
-      # # 2. Extract the first column (ID)
-      # # 3. Sort the IDs
-      # # 4. Save the IDs to a file named .lfs-assets-id
-      # - name: Create LFS file list
-      #   run: git lfs ls-files --long | cut -d ' ' -f1 | sort > .lfs-assets-id
+      # 1. List all LFS files
+      # 2. Extract the first column (ID)
+      # 3. Sort the IDs
+      # 4. Save the IDs to a file named .lfs-assets-id
+      - name: Create LFS file list
+        run: git lfs ls-files --long | cut -d ' ' -f1 | sort > .lfs-assets-id
 
-      # - name: LFS Cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: .git/lfs/objects
-      #     key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-lfs-
-      # - name: Git LFS Pull
-      #   run: git lfs pull
+      - name: LFS Cache
+        uses: actions/cache@v4
+        with:
+          path: .git/lfs/objects
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+          restore-keys: |
+            ${{ runner.os }}-lfs-
+      - name: Git LFS Pull
+        run: git lfs pull
 
       - name: OG Image Cache
         uses: actions/cache@v4
@@ -165,44 +165,16 @@ jobs:
           PUBLIC_LHCI_BASE_URL: ${{ vars.PUBLIC_LHCI_BASE_URL }}
         run: pnpm lighthouse
 
-  deploy-github-pages:
-    needs: [build]
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
-
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  # deploy-cloudflare-pages:
-  #   needs: lighthouse
+  # deploy-github-pages:
+  #   needs: [build]
   #   runs-on: ubuntu-latest
   #   permissions:
-  #     contents: read
-  #     deployments: write
-  #   steps:
-  #     - name: Checkout Repo
-  #       uses: actions/checkout@v4
+  #     pages: write
+  #     id-token: write
 
-  #     - name: Environment Setup
-  #       uses: ./.github/actions/setup
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
   #     - name: Download build artifacts
   #       uses: actions/download-artifact@v4
@@ -210,10 +182,38 @@ jobs:
   #         name: dist
   #         path: dist
 
-  #     - name: Publish to Cloudflare Pages
-  #       uses: cloudflare/wrangler-action@v3.14.1
+  #     - name: Upload pages artifact
+  #       uses: actions/upload-pages-artifact@v3
   #       with:
-  #         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-  #         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-  #         command: pages deploy --branch=${{ github.ref_name }}
-  #         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+  #         path: dist
+
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+
+  deploy-cloudflare-pages:
+    needs: lighthouse
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Environment Setup
+        uses: ./.github/actions/setup
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3.14.1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy --branch=${{ github.ref_name }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
