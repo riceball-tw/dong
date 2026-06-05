@@ -35,6 +35,9 @@ export default defineConfig({
 	base: finalBase,
 	// !IMPORTANT: Set site url property with your own domain
 	site: baseUrl,
+	devToolbar: {
+		enabled: !process.env.CI,
+	},
 	redirects: {
 		"/": `${finalBase}${defaultLocale}/`,
 		"/post/": `${finalBase}${defaultLocale}/post/`,
