@@ -24,18 +24,18 @@
 		"vite": "^7"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.8",
-		"@astrojs/mdx": "^5.0.3",
-		"@astrojs/partytown": "^2.1.6",
-		"@astrojs/react": "^5.0.3",
+		"@astrojs/check": "^0.9.9",
+		"@astrojs/mdx": "^6.0.2",
+		"@astrojs/partytown": "^2.1.7",
+		"@astrojs/react": "^5.0.7",
 		"@astrojs/rss": "^4.0.18",
-		"@astrojs/sitemap": "^3.7.2",
+		"@astrojs/sitemap": "^3.7.3",
 		"@pagefind/default-ui": "^1.5.2",
 		"@tailwindcss/vite": "^4.1.18",
 		"@types/react": "^18.3.27",
 		"@types/react-dom": "^18.3.7",
 		"@vercel/og": "^0.6.8",
-		"astro": "^6.1.5",
+		"astro": "^6.4.4",
 		"astro-expressive-code": "^0.32.4",
 		"astro-icon": "^1.1.5",
 		"astro-seo": "^0.8.4",
@@ -58,7 +58,6 @@
 		"tw-animate-css": "^1.4.0",
 		"typescript": "^5.9.3",
 		"uniqolor": "^1.1.1",
-		"wrangler": "^4.61.1",
 		"zod": "^3.25.76"
 	},
 	"devDependencies": {
