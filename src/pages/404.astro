@@ -18,16 +18,18 @@ const description = t("dizzy_minor_samuel_embrace");
     </h1>
     <p class="text-lg">{t("house_kind_samuel_fry")}</p>
     <div class="my-8 mt-12 flex gap-4">
-      <a data-cy="home-link" href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, '')}>
-        <Button as="span" size="lg">
-          {t("whole_gross_goat_hope")}
-        </Button>
-      </a>
-      <a data-cy="post-link" href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, 'post')}>
-        <Button variant="outline" as="span" size="lg">
-          {t("day_lazy_swan_laugh")}
-        </Button>
-      </a>
+      <Button as="a" data-cy="home-link" href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, '')} size="lg">
+        {t("whole_gross_goat_hope")}
+      </Button>
+      <Button
+        as="a"
+        data-cy="post-link"
+        href={getRelativeLocaleUrl(Astro.currentLocale || defaultLocale, 'post')}
+        variant="outline"
+        size="lg"
+      >
+        {t("day_lazy_swan_laugh")}
+      </Button>
     </div>
   </section>
 </BlogBase>
