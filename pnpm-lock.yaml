@@ -42,7 +42,7 @@ importers:
         specifier: ^0.6.8
         version: 0.6.8
       astro:
-        specifier: ^6.1.5
+        specifier: ^6.4.4
         version: 6.4.4(@types/node@25.2.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.57.1)(yaml@2.9.0)
       astro-expressive-code:
         specifier: ^0.32.4
