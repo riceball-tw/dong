@@ -31,6 +31,10 @@ const computedClass = cn(buttonVariants({ variant, size }), className);
 		<button class:list={[computedClass]} {...attrs}>
 			<slot />
 		</button>
+	) : Tag === "a" ? (
+		<a class:list={[computedClass]} {...attrs}>
+			<slot />
+		</a>
 	) : (
 		<span class:list={[computedClass]} {...attrs}>
 			<slot />
