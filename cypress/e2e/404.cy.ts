@@ -19,6 +19,9 @@ describe("404 Page is effective", () => {
 			.should("have.attr", "href")
 			.and("include", `/${defaultLocale}/post/`);
 		cy.dataCy("post-link").click({ force: true });
-		cy.location("pathname").should("eq", `${publicBaseUrl}${defaultLocale}/post/`);
+		cy.location("pathname").should(
+			"eq",
+			`${publicBaseUrl}${defaultLocale}/post/`,
+		);
 	});
 });
