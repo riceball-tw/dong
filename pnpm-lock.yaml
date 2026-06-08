@@ -96,8 +96,8 @@ importers:
         specifier: ^0.31.3
         version: 0.31.3
       tailwind-merge:
-        specifier: ^3.4.0
-        version: 3.4.0
+        specifier: ^3.6.0
+        version: 3.6.0
       tailwindcss:
         specifier: 4.0.9
         version: 4.0.9
@@ -4616,8 +4616,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  tailwind-merge@3.4.0:
-    resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
+  tailwind-merge@3.6.0:
+    resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
 
   tailwindcss-fluid-type@3.0.0--.beta.2:
     resolution: {integrity: sha512-mF7SmMx3FBIw4yX6lDySjb9qVvyYrDkQ9TIAxAnPswImd/AtopdvaenHwVcOaDXHcSWqRFy+zIERDSLdvUX+cA==}
@@ -10627,7 +10627,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.6.0
 
-  tailwind-merge@3.4.0: {}
+  tailwind-merge@3.6.0: {}
 
   tailwindcss-fluid-type@3.0.0--.beta.2(tailwindcss@4.0.9):
     dependencies:
