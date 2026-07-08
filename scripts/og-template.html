@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 1200px;
+            height: 630px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #140039 0%, #8969ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+        .card {
+            width: 1080px;
+            height: 510px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        .tag {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #a78bfa;
+            margin-bottom: 16px;
+        }
+        .title {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .description {
+            font-size: 24px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            max-width: 800px;
+            letter-spacing: 0.5px;
+        }
+        .footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #a78bfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="tag">{{.tag}}</div>
+        <div class="title">{{.title}}</div>
+        <div class="description">{{.description}}</div>
+        <div class="footer">
+            <div class="dot"></div>
+            <span>{{.site}}</span>
+        </div>
+    </div>
+</body>
+</html>

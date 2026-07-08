@@ -9,7 +9,46 @@ on:
       - main
 
 jobs:
+  generate-og:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Checkout external content
+        uses: actions/checkout@v4
+        with:
+          repository: riceball-tw/obsidian-sync
+          ref: main
+          path: src/content-temp/
+          token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
+          lfs: true
+
+      - name: Merge local and external content folder
+        run: rsync -av --ignore-existing src/content-temp/ src/content/
+
+      - name: Generate goog config from post frontmatter
+        run: bash scripts/generate-og-config.sh
+
+      - name: Generate OG images
+        id: generate
+        uses: riceball-tw/goog@v3
+        with:
+          config: goog-config.json
+          template: scripts/og-template.html
+          artifact_path: goog-artifacts
+          post_preview: "false"
+
+      - name: Upload OG images as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: og-images
+          path: ${{ steps.generate.outputs.artifact_path }}
+
   build:
+    needs: [generate-og]
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.60.0-jammy
@@ -65,12 +104,11 @@ jobs:
       - name: Git LFS Pull
         run: git lfs pull
 
-      - name: OG Image Cache
-        uses: actions/cache@v4
+      - name: Download pre-generated OG images
+        uses: actions/download-artifact@v4
         with:
-          path: public/og-cache
-          key: og-cache-${{ hashFiles('src/content/**') }}
-          restore-keys: og-cache-
+          name: og-images
+          path: .
 
       - name: Build
         run: pnpm build
