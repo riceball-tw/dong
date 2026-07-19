@@ -59,6 +59,8 @@ export default defineConfig({
 		},
 	},
 	prefetch: true,
+	// Preserve v6 whitespace behavior (Astro v7 defaults to 'jsx' which strips whitespace between inline elements)
+	compressHTML: true,
 
 	markdown: {
 		processor: unified({
