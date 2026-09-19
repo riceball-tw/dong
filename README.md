@@ -7,7 +7,7 @@
 </h1>
 
 <div align="center">
-A battle-tested, feature-rich blog theme powered by Astro v6
+A battle-tested, feature-rich blog theme powered by Astro v7
 </div>
 
 <br />
