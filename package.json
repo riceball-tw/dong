@@ -50,7 +50,7 @@
 		"remark-mermaidjs": "^7.0.0",
 		"sanitize-html": "^2.17.0",
 		"sharp": "^0.31.3",
-		"tailwind-merge": "^3.4.0",
+		"tailwind-merge": "^3.6.0",
 		"tailwindcss": "4.0.9",
 		"tailwindcss-fluid-type": "3.0.0--.beta.2",
 		"typescript": "^5.9.3",
